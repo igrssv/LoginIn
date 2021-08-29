@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUk-M3-scS">
-                                <rect key="frame" x="70" y="264.5" width="180" height="39"/>
+                                <rect key="frame" x="70" y="256.5" width="180" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="More info"/>
                                 <connections>
@@ -159,28 +159,28 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sah-fo-3mJ">
-                                <rect key="frame" x="20" y="60" width="128" height="136"/>
+                                <rect key="frame" x="20" y="60" width="128" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="sah-fo-3mJ" secondAttribute="height" multiplier="16:17" id="BYp-4h-1da"/>
+                                    <constraint firstAttribute="width" secondItem="sah-fo-3mJ" secondAttribute="height" multiplier="1:1" id="BYp-4h-1da"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zYE-Hj-Fxz">
-                                <rect key="frame" x="168" y="89.5" width="132" height="77.5"/>
+                                <rect key="frame" x="168" y="87.5" width="132" height="73"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE5-Fc-8lo">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-KQ-s0b">
-                                        <rect key="frame" x="0.0" y="28.5" width="132" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="27" width="132" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbL-hC-WHQ">
-                                        <rect key="frame" x="0.0" y="57" width="132" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="54" width="132" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
