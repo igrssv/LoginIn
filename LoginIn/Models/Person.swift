@@ -6,8 +6,7 @@
 //
 
 struct Person {
-    let login: String
-    let password: String
+    let loginAndPassword: User
     let name: String
     let surname: String
     let photo: String
@@ -15,11 +14,9 @@ struct Person {
     let age: String
     let citi: String
     let message: String
-    
-    
+
     static func getPerson() -> Person {
-        Person(login: "q",
-               password: "q",
+        Person(loginAndPassword: User(login: "User", password: "Password"),
                name: "Igor",
                surname: "Sysoev",
                photo: "myPhoto",
@@ -30,11 +27,14 @@ struct Person {
                          Hobbies(hobbi: "Cars")],
                age: "Age: 27 ",
                citi: "Citi: Moscow",
-               message: "📨: igrssv")
-               
+               message: "📨: igrssv")            
     }
 }
 
+struct User {
+    let login: String
+    let password: String
+}
 
 
 struct Hobbies {

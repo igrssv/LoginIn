@@ -155,7 +155,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="More info"/>
                                 <connections>
-                                    <action selector="moreInfoButton:" destination="pmM-sR-Zjf" eventType="touchUpInside" id="l9c-GA-226"/>
                                     <segue destination="ouO-9P-7eP" kind="show" id="J7s-WA-0eo"/>
                                 </connections>
                             </button>
@@ -217,23 +216,48 @@
             </objects>
             <point key="canvasLocation" x="3686.25" y="75"/>
         </scene>
-        <!--More info-->
+        <!--Hobbies-->
         <scene sceneID="OzG-B3-Fve">
             <objects>
                 <viewController id="ouO-9P-7eP" customClass="MoreInfoViewController" customModule="LoginIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T8d-IZ-d5g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQh-gF-03q">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qGZ-l1-WJf">
+                                        <rect key="frame" x="0.0" y="24.5" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qGZ-l1-WJf" id="KfU-NX-GQu">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="paR-6P-1SW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="QQh-gF-03q" firstAttribute="leading" secondItem="paR-6P-1SW" secondAttribute="leading" id="SEZ-N1-85W"/>
+                            <constraint firstItem="paR-6P-1SW" firstAttribute="bottom" secondItem="QQh-gF-03q" secondAttribute="bottom" id="bu7-4X-cJk"/>
+                            <constraint firstItem="QQh-gF-03q" firstAttribute="top" secondItem="paR-6P-1SW" secondAttribute="top" id="hVq-cH-DKn"/>
+                            <constraint firstItem="paR-6P-1SW" firstAttribute="trailing" secondItem="QQh-gF-03q" secondAttribute="trailing" id="qPk-Je-Tmg"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="More info" id="qGv-lh-sZq">
+                    <navigationItem key="navigationItem" title="Hobbies" id="qGv-lh-sZq">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="OcT-ay-0gB">
                             <connections>
                                 <segue destination="mxx-gW-1Eh" kind="unwind" unwindAction="unwindFor:" id="wqm-Lc-PM4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="hobbiesTableView" destination="QQh-gF-03q" id="k00-s6-nMD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIF-cH-RFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mxx-gW-1Eh" userLabel="Exit" sceneMemberID="exit"/>
@@ -287,6 +311,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

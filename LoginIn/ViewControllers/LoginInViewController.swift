@@ -24,8 +24,11 @@ class LoginInViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         for viewController in tabBarController.viewControllers! {
-            if let welcomeVS = viewController as? WelcomeViewController {
-                welcomeVS.username = user.name + " " + user.surname
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.username = user.name + " " + user.surname
+            } else if let navigationvVC = viewController as? UINavigationController {
+                let userVC = navigationvVC.topViewController as! UserViewController
+                userVC.user = user
             }
            
         }
@@ -34,17 +37,16 @@ class LoginInViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBAction
     @IBAction func logInButton() {
-        if userNameTF?.text != user.login || passwordTF?.text != user.password {
+        if userNameTF?.text != user.loginAndPassword.login || passwordTF?.text != user.loginAndPassword.password {
             alertCreate(title: "Oops!", message: "Error User name or password")
         }
         }
     
     @IBAction func helpButton(_ sender: UIButton) {
-// поправить
         if sender.titleLabel?.text != "Forgot  User Name" {
-            alertCreate(title: "Oops!", message: "You password: \(user.password)")
+            alertCreate(title: "Oops!", message: "You password: \(user.loginAndPassword.password)")
         } else {
-            alertCreate(title: "Oops!", message: "You user name: \(user.login)")
+            alertCreate(title: "Oops!", message: "You user name: \(user.loginAndPassword.login)")
         }
     }
 
